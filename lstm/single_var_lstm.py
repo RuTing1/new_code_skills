@@ -7,7 +7,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #——————————————————导入数据——————————————————————
-df = pd.read_csv('dataset_1.csv', encoding='gbk')  # 读入股票数据
+df = pd.read_csv('dataset_2.csv', encoding='gbk')  # 读入股票数据
+df = df.loc[:, ['date', 'high']]
 data = np.array(df['最高价'])   # 获取最高价序列
 data = data[::-1]      # 反转，使数据按照日期先后顺序排列
 # 以折线图展示data
